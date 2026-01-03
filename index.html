@@ -58,7 +58,7 @@
           <code>Key Switch Sheet</code> は、<code>DAW</code>用のキースイッチマップファイルを
           Googleスプレッドシートで手軽に作成するためのツールです。
         </p>
-        <img src="img/スクリーンショット 2026-01-02 171309.png" alt="" class="zoomable">
+        <img src="img/over-view.png" alt="over-view" class="zoomable">
         <ul>
           <li>
             1つのアーティキュレーションにつき1つのMIDIノートを出力する
@@ -144,12 +144,12 @@
           画面下部のタブを切り替えてシートを切り替えてください。
         </p>
 
-        <h3 id="sheet-main">Main シート</h3><!-- **********************************************************  -->
+        <h3 id="sheet-main">Main シート</h3><!-- **************************************************************  -->
         <p>
           キースイッチマップの主要なデータを入力するシートです。<br>
           1行につき1つのアーティキュレーション（奏法）を定義します。<br>
           手動入力やコピー&ペーストで入力可能です。<br>
-          データの入力に便利な<sup>※</sup><a href="#gemini-gem">Gemini Gem</a>
+          データの入力に便利な<sup>※</sup><a href="#gemini-gem">キースイッチ抽出 Gem</a>
           を用意しています。ぜひご活用ください。
         </p>
         <ul>
@@ -161,7 +161,7 @@
             <strong>MIDI Note:</strong><br><!--------------------------------------------------------------------->
             MIDIノート名を「音名 + 変化記号 + オクターブ数値」の形式で入力します。
             （例: <code>C#-1</code>, <code>F8</code>など）<br>
-            <img src="img/スクリーンショット 2026-01-02 210842.png" alt="">
+            <img src="img/midi-note.png" alt="midi-note">
             <div class="quote-style">
               💡 入力確定時に自動判定が行われます。それに応じて文字色が変化します。
               <ul>
@@ -185,7 +185,7 @@
             アーティキュレーションが所属する<sup>※</sup>グループを定義します。<br>
             <code>Groups</code>シートに記入されたリストの中からプルダウン選択します。<br>
             <sup>※</sup><a href="#sidebar-group">サイドバー機能</a>を使って一括指定することも可能です。
-            <img src="img/スクリーンショット 2026-01-02 211511.png" alt="">
+            <img src="img/group-name.png" alt="group-name">
             そのため、先ずは<code>Groups</code>シートの<code>Group List</code>列にグループを
             記入しリストを作ってください。<br>
             <p class="alert note">
@@ -197,7 +197,7 @@
           <li>
             <strong>Color:</strong> <br><!------------------------------------------------------------------------>
             <code>#rrggbb</code>形式( 6桁の16進数 )のカラーコードを入力します。<br>
-            <img src="img/スクリーンショット 2026-01-02 212333.png" alt="">
+            <img src="img/color-code.png" alt="color-code">
             <div class="quote-style">
               <p class="note">
                 💡 <sup>※</sup><a href="#sidebar">サイドバー</a>の<strong>カラーピッカー</strong>や
@@ -225,7 +225,7 @@
 
         <h3 id="sheet-settings">Settings シート</h3><!-- **************************************************  -->
         <p><code>Map Name</code>と<code>Middle C</code>を設定します。</p>
-        <img src="img/スクリーンショット 2026-01-02 213319.png" alt="">
+        <img src="img/settings-sheet.png" alt="settings-sheet">
         <ul>
           <li>
             <strong>Map Name:</strong><br>
@@ -240,11 +240,12 @@
         </ul>
         <h4 id="mapping-viewer">Mapping Viewer:</h4><!------------------------------------------------------------>
         <p>
-          <code>Settings</code>シートには、<code>DAW</code>のピアノロールに見立てたキースイッチマッピング確認用の表<br>
+          <code>Settings</code>シートには、<code>DAW</code>のピアノロールに見立てた
+          キースイッチマッピング確認用の表<br>
           <code>Mapping Viewer</code>が用意されています。
         </p>
         <div class="tall-crop">
-          <img src="img/スクリーンショット 2026-01-02 172618.png" alt="" class="zoomable">
+          <img src="img/mapping-viewer.png" alt="mapping-viewer" class="zoomable">
         </div>
         <ul>
           <li>表にはMIDIノート名とMIDIノートナンバーを表示しています。</li>
@@ -310,7 +311,7 @@
           エクスポート時に表示されるダイアログで、<code>オクターブオフセット</code>
           （初期値: 0）を設定できます。
         </p>
-        <img src="img/スクリーンショット 2026-01-02 172414.png" alt="">
+        <img src="img/octave-offset.png" alt="octave-offset">
         <ul>
           <li>音源側の<code>Middle C</code>と<code>DAW</code>側の
             <code>Middle C</code>の設定が異なる場合に、この値で補正します。
@@ -399,18 +400,18 @@
                 <code>Groups</code>シートのグループリストの定義順に<code>Main</code>シート全体を並べ替えます。
               </li>
               <li>
-                <strong>🧩⇈🎹　半音階で範囲を埋める( 昇順 / 降順 ):</strong><br>
+                <strong>🧩⇈🎹　半音階で範囲を埋める( 高音側へ / 低音側へ ):</strong><br>
                 選択開始セル（太い青枠）のMIDIノートを基準に、選択した範囲に対して
                 半音階の連番MIDIノートでセルを埋めます。<br>
-                スプレッドシートのオートフィル機能と類似したMIDIノート用のオートフィル機能です。<br>
+                MIDIノート用のオートフィルのような機能です。<br>
                 <p class="alert note">
                   ※選択開始セルから上に向かって選択していても基準セルは選択開始セルとなります。<br>
-                  よって、基準セルがヘッダ行だった場合、基準セルに有効なMIDIノートが入力されていなかった
+                  よって、基準セルがヘッダ行だった場合や、基準セルに有効なMIDIノートが入力されていなかった
                   場合などはエラーとなり処理が実行されません。
                 </p>
               </li>
             </ul>
-            <img src="img/スクリーンショット 2026-01-02 223739.png" alt="">
+            <img src="img/fill-midi-note.png" alt="fill-midi-note">
           </li>
           <li><strong>Settingsシート</strong><!-------------------------------------------------------------------->
             <ul>
@@ -432,8 +433,8 @@
         <ul>
           <li>
             <strong>📝　ヘッダーヘルプの表示切替:</strong><br>
-            各列のヘッダー（1行目）に表示されるヘルプメモの表示/非表示を切り替えます。
-            <img src="img/スクリーンショット 2026-01-02 224525.png" alt="">
+            ヘッダー行に表示されるヘルプメモの表示 / 非表示を切り替えます。
+            <img src="img/header-help.png" alt="header-help">
           </li>
           <li>
             <strong>🌐　ヘルプセンターを表示:</strong><br>
@@ -480,7 +481,7 @@
         <h3 id="sidebar-color">🎨 カラー選択</h3><!--  *******************************************************  -->
         <p>プリセットカラーやカラーピッカーから色を選択できます。</p>
         <div class="tall-crop">
-          <img src="img/スクリーンショット 2026-01-02 170717.png" alt="" class="zoomable">
+          <img src="img/sidebar.png" alt="sidebar" class="zoomable">
         </div>
         <ul>
           <li>
@@ -489,8 +490,9 @@
             <code>Cubase</code>向けのエクスポートを行う場合は、この中から選択することを強く推奨します。
           </li>
           <li>
-            <strong>カラーピッカー:</strong><br>自由に色を設定できますが、
-            <code>Cubase</code>では正しく反映されず、デフォルトの色に置き換わる場合があります。
+            <strong>カラーピッカー:</strong><br>
+            自由に色を設定できます。クリップボードにコピーすることもできます。<br>
+            ※<code>Cubase</code>では正しく反映されず、デフォルトの色に置き換わる場合があります。
           </li>
         </ul>
         <p>選択した色は、下部のアクションボタンを使ってシートに適用します。</p>
@@ -501,7 +503,7 @@
           <code>Groups</code>シートを編集した場合は、更新ボタン「<span class="skyblue">↻</span>
           グループリストを再読み込み」を押してリストを更新してください。
         </p>
-        <img src="img/スクリーンショット 2026-01-03 144145.png" alt="">
+        <img src="img/group-select.png" alt="group-select">
 
         <h3 id="sidebar-action">✔️ アクション (Mainシート)</h3><!--  ******************************************  -->
         <div class="quote-style">
@@ -541,7 +543,7 @@
           <code>Google Gemini</code>用のカスタム<code>Gem</code>です。
         </p>
         <div class="tall-crop">
-          <img src="img/スクリーンショット 2026-01-02 172906.png" alt="" class="zoomable">
+          <img src="img/gemini.png" alt="gemini" class="zoomable">
         </div>
         <ol>
           <li>
@@ -586,12 +588,12 @@
             作業フロー ( <span class="skyblue">クリックして開閉</span> )
           </strong>
           <div class="accordion-content">
-            手順通りにやる必要はありませんが、基本的な作業フローは以下のようになっています。
+            基本的な作業フローは以下のようになっています。<br>
+            <small class="indent">※この手順でなくても問題はありません。</small><br><br>
             <ol>
               <li>
                 <strong>準備 :</strong><br>
-                  <code>Main</code>シート<code>Articuration Name</code>列、<code>MIDI Note</code>列
-                  への入力は手動入力でも構いませんが、<br>
+                  シートへの入力は手動入力の外にコピー＆ペーストでも入力できます。<br>
                   <sup>※</sup><a href="#gemini-gem">キースイッチ抽出 Gem</a>を使うと効率的です。<br>
               </li>
               <li>
@@ -602,22 +604,19 @@
                 に貼り付けるだけで自動的にセルに分割されてデータが挿入されます。<br>
                 <div class="quote-style">
                   <div class="alert-float-image">
-                    <img
-                      src="img/スクリーンショット 2026-01-03 163753.png"
-                      alt="" class="zoomable"
-                      width="200"
-                    >
+                    <img src="img/split-text.png"alt="split-text" class="zoomable" width="200">
                   </div>
                   <p class="note">
-                    💡表のコピーからの貼り付けでは無く<code>CSV</code>データなどを貼り付けた場合には
+                    💡 「表のコピー」からの貼り付けでは無く<code>CSV</code>データなどを貼り付けた場合には
                     自動的にセルに分割されない場合があります。<br>
-                    その場合は貼り付けを行った際に出現するアイコンのプルダウンメニューから「テキストを列に分割」
-                    を選択するとうまくいく場合があります。
+                    その場合は貼り付けを行った際に出現するアイコンのプルダウンメニューから
+                    「テキストを列に分割」を選択するとうまくいく場合があります。
                   </p>
                   <div class="clear"></div>
                 </div>
                 <code>MIDI Note</code>列にエラー判定が出た場合には修正します。<br>
-                範囲外判定の場合には<code>Settings</code>シートの<code>Middle C</code>の設定を見直してください。<br>
+                範囲外判定の場合には<code>Settings</code>シートの<code>Middle C</code>
+                の設定を見直してください。<br>
                 <code>Middle C</code>はデフォルトでは<code>4</code>に設定されています。
               </li>
               <li>
@@ -670,10 +669,10 @@
               <code>C4</code>と定義しています。他にも派閥があります。
             </li>
             <li><strong>音源による違い:</strong><br>
-              採用している<code>Middle C</code>の定義が音源メーカーや<code>DAW</code>によってまちまちなので
-              入力した音と出力される音でオクターブのズレが生じます。<br>
-              マニュアルに記載されたMIDIノートを入力しているにもかかわらず、キースイッチのMIDIノートが意図した
-              反応をしない時はこれが原因である可能性があります。
+              採用している<code>Middle C</code>の定義が音源メーカーや<code>DAW</code>
+              によってまちまちなので入力した音と出力される音でオクターブのズレが生じます。<br>
+              マニュアルに記載されたMIDIノートを入力しているにもかかわらず、キースイッチのMIDIノートが
+              意図した反応をしない時はこれが原因である可能性があります。
             </li>
           </ul>
         </div>
@@ -681,11 +680,12 @@
           <strong>本アプリでの設定：</strong><br>
           <code>Settings</code>シートの<code>Middle C</code>で、使用する
           <strong>音源側の仕様に合わせて</strong><code>3, 4, 5</code>から値を選択してください。<br>
-          もし<code>Main</code>シートで「範囲外」の判定が出た場合は、この<code>Middle C</code>の設定が
-          音源と合っていない可能性があります。設定を変更して値が正常範囲（黒色）になるか確認してください。<br>
+          もし<code>Main</code>シートで「範囲外」の判定が出た場合は、この
+          <code>Middle C</code>の設定が音源と合っていない可能性があります。
+          設定を変更して値が正常範囲（黒色）になるか確認してください。<br>
         </p>
         <p>
-          それでも音源側と<code>DAW</code>側の採用している<code>Middle C</code>が合わない場合はエクスポート時に
+          音源側と<code>DAW</code>側の採用している<code>Middle C</code>が合わない場合はエクスポート時に
           <sup>※</sup><a href="#octave-offset">オクターブオフセット</a>を設定することによって対応してください。<br>
           <small>
             ※<code>DAW</code>側でこの差分を吸収する設定ができる機能が搭載されている物もあります。
