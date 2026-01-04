@@ -87,49 +87,52 @@
             導入手順 ( <span class="skyblue">クリックして開閉</span> )
           </strong>
           <div class="accordion-content">
-            <ol>
+            <ul>
               <li>
-                配布リンクをクリックすると「ドキュメントのコピー」画面が表示されます。
-                「コピーを作成」ボタンをクリックして、自分のGoogleドライブに保存してください。
+                こちらの<a href="#">配布用リンク</a>からアクセスして下さい。
+              </li>
+              <li>
+                配布リンクをクリックすると、スプレッドシートのプレビューが表示された<br>
+                「テンプレート」画面が開きます。
+                <img src="img/template.png" alt="template" class="zoomable" width="400">
+                右上の「テンプレートを使用」ボタンをクリックすると、スプレッドシートの
+                コピーがあなたの<br><strong>Googleドライブ</strong>に保存されます。
               </li>
               <li>
                 <strong>初回実行時の承認手順:</strong><br>
-                スクリプトを初めて実行する際、Googleによる承認画面が表示されます。<br>
+                スクリプトを初めて実行する際、<code>Google</code>による承認画面が表示されます。<br>
                 以下の手順で許可を行ってください。
-                <ul>
+                <ol>
                   <li>
-                    「承認が必要です」というダイアログで「続行」をクリックします。
-                    <div class="image-placeholder">[画像: 承認が必要ですダイアログ]</div>
+                    「承認が必要です」というダイアログで「OK」をクリックします。
+                    <img src="img/confirm-dialog.png" alt="confirm-dialog" class="zoomable" width="400">
                   </li>
                   <li>
                     アカウントの選択画面で、使用するGoogleアカウントを選択します。
-                    <div class="image-placeholder">
-                      [画像: アカウント選択画面]
-                    </div>
+                    <img src="img/account-select.png" alt="account-select" class="zoomable" width="300">
                   </li>
                   <li>
                     「このアプリはGoogleで確認されていません」という警告が表示されます。<br>
-                    左下の「詳細」をクリックし、下部に表示される
-                    「Key Switch Sheet（安全ではないページ）に移動」をクリックしてください。
-                    <div class="image-placeholder">
-                      [画像: 警告画面と詳細リンク]
-                    </div>
+                    左下の「詳細」をクリックします。
+                    <img src="img/not-confirmed.png" alt="not-confirmed" class="zoomable" width="400">
                   </li>
                   <li>
-                    アクセス権限の確認画面が表示されます。もし権限の選択（チェックボックス）が表示された場合は、
-                    <strong>すべての項目にチェックを入れて</strong>から「許可」をクリックしてください。
-                    <div class="image-placeholder">
-                      [画像: 権限確認画面（すべてチェック）]
-                    </div>
+                    詳細情報が表示されますので、「（スプレッドシートの名前）（安全ではないページ）に移動」をクリックしてください。
+                    <img src="img/not-safe.png" alt="not-safe" class="zoomable" width="400">
                   </li>
-                </ul>
-                <p class="indent note small">
-                  ※ この警告は、Googleによる検証を受けていない個人作成のスクリプトで表示される
+                  <li>
+                    アクセス権限の確認画面が表示されます。権限の選択（チェックボックス）が表示されたら<br>
+                    <strong>「すべて選択」</strong>にチェックを入れて「続行」をクリックしてください。
+                    <img src="img/continue.png" alt="continue" class="zoomable" width="200">
+                  </li>
+                </ol>
+                <p class="quote-style indent note">
+                  💡 この警告は、<code>Google</code>による検証を受けていない個人作成のスクリプトで表示される
                   標準的なものです。<br>この認証作業は初回のみ必要です。
                   一度すべての権限を許可すれば、次回以降は毎回認証する必要はありません。
                 </p>
               </li>
-            </ol>
+            </ul>
           </div>
         </div><hr>
       </section>
