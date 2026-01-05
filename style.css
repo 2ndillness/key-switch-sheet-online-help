@@ -104,13 +104,14 @@ footer {
 nav {
   width: 250px;
   background: #f8f9fa;
-  padding: 2rem;
+  padding: 1.5rem;
   border-right: 1px solid #dee2e6;
   position: sticky;
   top: 0;
   height: calc(100vh - 4rem);
   overflow-y: auto;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 nav ul {
@@ -120,7 +121,7 @@ nav ul {
 }
 
 nav > ul > li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 nav a {
@@ -140,7 +141,7 @@ nav ul ul {
 }
 
 nav ul ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 nav ul ul a {
@@ -414,6 +415,14 @@ img {
   text-indent: -1em;;
 }
 
+.spacer {
+  margin: 2rem 0;
+}
+
+.end-space {
+  padding-bottom: 1rem;
+}
+
 .right {
   display: block;
   text-align: right;
@@ -427,8 +436,28 @@ img {
   font-size: 0.8rem;
 }
 
-.skyblue {
+.bright-blue {
   color: #0073ff;
+}
+
+.danger {
+  color: darkorange;
+}
+
+.warning {
+  color: red;
+}
+
+.jump::before {
+  content: "↳ ";
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.quest::before {
+  content: "? ";
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
 /* ==========================================================================

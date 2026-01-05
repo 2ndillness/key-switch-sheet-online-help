@@ -59,7 +59,6 @@
           Googleスプレッドシートで手軽に作成するためのツールです。
         </p>
         <img src="img/over-view.png" alt="over-view" class="zoomable" width="600">
-        <p>
         <ul>
           <li>
             1つのアーティキュレーションにつき1つのMIDIノートを出力する
@@ -85,57 +84,61 @@
         <h2>導入方法</h2>
         <div class="accordion">
           <strong class="accordion-header">
-            導入手順 ( <span class="skyblue">クリックして開閉</span> )
+            導入手順 ( <span class="bright-blue">クリックして開閉</span> )
           </strong>
           <div class="accordion-content">
-            <ul>
+            <div class="right spacer">
+              こちらのボタンからアクセスして下さい。
+              <a href="#" id="template-link"
+                class="gem-btn" target="_blank" rel="noopener noreferrer">
+                🚀 配布用リンクを開く
+              </a>
+            </div>
+            <p>
+              クリックすると、スプレッドシートのプレビューが表示された「テンプレート」画面が開きます。
+              <img src="img/template.png" alt="template" class="zoomable" width="400">
+              右上の「テンプレートを使用」ボタンをクリックすると、スプレッドシートの
+              コピーがあなたの<br><strong>Googleドライブ</strong>に保存されます。
+            </p>
+            <p>
+              <strong>初回実行時の承認手順:</strong><br>
+              スクリプトを初めて実行する際、<code>Google</code>による承認画面が表示されます。<br>
+              以下の手順で許可を行ってください。
+            </p>
+            <ol>
               <li>
-                こちらの<a href="#">配布用リンク</a>からアクセスして下さい。
+                「承認が必要です」というダイアログで「OK」をクリックします。
+                <img src="img/confirm-dialog.png" alt="confirm-dialog" class="zoomable" width="400">
               </li>
               <li>
-                配布リンクをクリックすると、スプレッドシートのプレビューが表示された<br>
-                「テンプレート」画面が開きます。
-                <img src="img/template.png" alt="template" class="zoomable" width="400">
-                右上の「テンプレートを使用」ボタンをクリックすると、スプレッドシートの
-                コピーがあなたの<br><strong>Googleドライブ</strong>に保存されます。
+                アカウントの選択画面で、使用するGoogleアカウントを選択します。
+                <img src="img/account-select.png" alt="account-select" class="zoomable" width="400">
               </li>
               <li>
-                <strong>初回実行時の承認手順:</strong><br>
-                スクリプトを初めて実行する際、<code>Google</code>による承認画面が表示されます。<br>
-                以下の手順で許可を行ってください。
-                <ol>
-                  <li>
-                    「承認が必要です」というダイアログで「OK」をクリックします。
-                    <img src="img/confirm-dialog.png" alt="confirm-dialog" class="zoomable" width="400">
-                  </li>
-                  <li>
-                    アカウントの選択画面で、使用するGoogleアカウントを選択します。
-                    <img src="img/account-select.png" alt="account-select" class="zoomable" width="300">
-                  </li>
-                  <li>
-                    「このアプリはGoogleで確認されていません」という警告が表示されます。<br>
-                    左下の「詳細」をクリックします。
-                    <img src="img/not-confirmed.png" alt="not-confirmed" class="zoomable" width="400">
-                  </li>
-                  <li>
-                    詳細情報が表示されますので、「（スプレッドシートの名前）（安全ではないページ）に移動」をクリックしてください。
-                    <img src="img/not-safe.png" alt="not-safe" class="zoomable" width="400">
-                  </li>
-                  <li>
-                    アクセス権限の確認画面が表示されます。権限の選択（チェックボックス）が表示されたら<br>
-                    <strong>「すべて選択」</strong>にチェックを入れて「続行」をクリックしてください。
-                    <img src="img/continue.png" alt="continue" class="zoomable" width="200">
-                  </li>
-                </ol>
-                <p class="quote-style indent note">
-                  💡 この警告は、<code>Google</code>による検証を受けていない個人作成のスクリプトで表示される
-                  標準的なものです。<br>この認証作業は初回のみ必要です。
-                  一度すべての権限を許可すれば、次回以降は毎回認証する必要はありません。
-                </p>
+                「このアプリはGoogleで確認されていません」という警告が表示されます。<br>
+                左下の「詳細」をクリックします。
+                <img src="img/not-confirmed.png" alt="not-confirmed" class="zoomable" width="400">
               </li>
-            </ul>
+              <li>
+                詳細情報が表示されますので、「Key Switch Sheet（安全ではないページ）に移動」をクリックします。
+                <img src="img/not-safe.png" alt="not-safe" class="zoomable" width="400">
+              </li>
+              <li>
+                アクセス権限の確認画面が表示されます。権限の選択（チェックボックス）が表示されたら<br>
+                <strong>「すべて選択」</strong>にチェックを入れて「続行」をクリックしてください。
+                <div class="tall-crop">
+                  <img src="img/continue.png" alt="continue" class="zoomable" width="400">
+                </div>
+              </li>
+            </ol>
+            <p class="quote-style indent note">
+              💡 この警告は、<code>Google</code>による検証を受けていない個人作成のスクリプトで表示される
+              標準的なものです。<br>この認証作業は初回のみ必要です。
+              一度すべての権限を許可すれば、次回以降は毎回認証する必要はありません。
+            </p>
           </div>
-        </div><hr>
+        </div>
+        <hr>
       </section>
       <!-- #endregion -->
 
@@ -143,9 +146,9 @@
       <section id="sheets"><!-- ******************************************************************************  -->
         <h2>シートの構成</h2>
         <p>
-          このツールは <code>Main</code>,<code>Groups</code>,<code>Settings</code>の
+          このツールは <code>Main</code>,<code>Groups</code>,<code>Settings</code> の
           3つのシートで構成されています。<br>
-          画面左下のタブをクリックてシートを切り替えてください。
+          画面左下のタブをクリックしてシートを切り替えてください。
         </p>
 
         <h3 id="sheet-main">Main シート</h3><!-- **************************************************************  -->
@@ -153,7 +156,7 @@
           キースイッチマップの主要なデータを入力するシートです。<br>
           1行につき1つのアーティキュレーション（奏法）を定義します。<br>
           手動入力やコピー&ペーストで入力可能です。<br>
-          データの入力に便利な<sup>※</sup><a href="#gemini-gem">キースイッチ抽出 Gem</a>
+          データの入力に便利な<a href="#gemini-gem" class="jump">キースイッチ抽出 Gem</a>
           を用意しています。ぜひご活用ください。
         </p>
         <ul>
@@ -165,35 +168,44 @@
             <strong>MIDI Note:</strong><br><!--------------------------------------------------------------------->
             MIDIノート名を「音名 + 変化記号 + オクターブ数値」の形式で入力します。
             （例: <code>C#-1</code>, <code>F8</code>など）<br>
-            <img src="img/midi-note.png" alt="midi-note">
+            <img src="img/validate-midi.png" alt="varidate-midi">
+            <p class="note small">
+              ※小文字や「♭」表記にも対応していますが、基本的には音名は「大文字」、
+              変化記号は「#」で統一することを推奨します。
+            </p>
             <div class="quote-style">
               💡 入力確定時に自動判定が行われます。それに応じて文字色が変化します。
               <ul>
-                <li><strong>赤 (エラー):</strong><br>
+                <li><strong class="warning">赤 </strong>(エラー):<br>
                   絶対的範囲外、またはフォーマット不正な値です。セルにメモが表示されます。
                 </li>
                 <li>
-                  <strong>オレンジ (範囲外):</strong><br>
-                  現在の<sup>※</sup><code>Middle C</code>設定では範囲外ですが、
+                  <strong class="danger">オレンジ </strong>(範囲外):<br>
+                  現在の<sup>?</sup><code>Middle C</code>設定では範囲外ですが、
                   設定変更により有効になる可能性がある値です。セルにメモが表示されます。
                 </li>
-                <li><strong>黒 (正常):</strong><br>
-                  現在の<code>Middle C</code>設定において、MIDIノート番号が0〜127の範囲内に収まる値。
+                <li><strong>黒 </strong>(正常):<br>
+                  現在の<code>Middle C</code>設定において、MIDIノート番号が
+                  <code>0〜127</code>の範囲内に収まる値。
                 </li>
               </ul>
             </div>
-            <a href="#middle-C" class="right">※ Middle C とは</a>
+            MIDIノートにエラーや範囲外が存在すると
+            <a href="#export-err" class="jump">エクスポートできません。</a>
+            <a href="#middle-C" class="right quest">Middle C とは</a>
           </li>
           <li>
             <strong>Group Name:</strong><br><!-------------------------------------------------------------------->
             アーティキュレーションが所属する<sup>※</sup>グループを定義します。<br>
             <code>Groups</code>シートに記入されたリストの中からプルダウン選択します。<br>
-            <sup>※</sup><a href="#sidebar-group">サイドバー機能</a>を使って一括指定することも可能です。
+            <a href="#sidebar-group" class="jump">サイドバー機能</a>を使って一括指定することも可能です。
             <img src="img/group-name.png" alt="group-name">
             そのため、先ずは<code>Groups</code>シートの<code>Group List</code>列にグループを
             記入しリストを作ってください。<br>
             <p class="alert note small">
-              ※エクスポート時にグループが未選択だった場合にはグループリストの先頭のグループが適用されます。<br>
+              ※ グループの扱い<br>
+              Cakewalkでは、アーティキュレーションはいずれかのグループに所属している必要があります。<br>
+              エクスポート時にグループが未選択だった場合にはグループリストの先頭のグループが適用されます。<br>
               Cubase 形式でのエクスポートではグループは4つまでに制限されています。<br>
               Studio One 形式でのエクスポートではグループは反映されません。<br>
             </p>
@@ -204,14 +216,14 @@
             <img src="img/color-code.png" alt="color-code">
             <div class="quote-style">
               <p class="note">
-                💡 <sup>※</sup><a href="#sidebar">サイドバー</a>の<strong>カラーピッカー</strong>や
-                <strong>プリセット</strong>からも入力可能です。<br>
-                不正な値の場合は文字色が赤になり、メモが表示されます。
+                💡 <a href="#sidebar" class="jump">サイドバー</a>の<strong>プリセットカラー</strong>
+                や<strong>カラーピッカー</strong>からも入力可能です。<br>
+                不正な値の場合は<span class="warning">文字色が赤</span>になり、メモが表示されます。
               </p>
               <p class="note small">
-                ※エクスポート時に未記入もしくは不正な値だった場合にはデフォルト値が採用されます。<br>
+                ❗ エクスポート時に未記入もしくは不正な値だった場合にはデフォルト値が採用されます。<br>
                 <code>Cubase</code>向けに作成する場合は、プリセットカラーの使用を推奨します。
-                <sup>※</sup><a href="#cubase-color">カラー設定の注意</a>
+                <a href="#cubase-color" class="jump">カラー設定の注意</a>
               </p>
             </div>
           </li>
@@ -237,9 +249,9 @@
           </li>
           <li>
             <strong>Middle C:</strong><br>
-            音源側の<sup>※</sup><code>Middle C</code>の設定に合わせます。
+            音源側の<sup>?</sup><code>Middle C</code>の設定に合わせます。
             <code>3, 4, 5</code>の値からプルダウンで選択します。
-            <a href="#middle-C" class="right">※ Middle C とは</a>
+            <a href="#middle-C" class="right quest">Middle C とは</a>
           </li>
         </ul>
         <h4 id="mapping-viewer">Mapping Viewer:</h4><!------------------------------------------------------------>
@@ -252,7 +264,7 @@
           <img src="img/mapping-viewer.png" alt="mapping-viewer" class="zoomable">
         </div>
         <ul>
-          <li>表にはMIDIノート名とMIDIノートナンバーを表示しています。</li>
+          <li>表にはMIDIノート名とMIDIノートナンバー（0～127迄の計128行）を表示しています。</li>
           <li>MIDIノートナンバーは<code>Middle C = 60</code>で固定されています。</li>
           <li>
             MIDIノート名は、設定した<code>Middle C</code>の値によって表示（鍵盤上の位置）が変動します。
@@ -271,121 +283,129 @@
         <p>スプレッドシート上部のメニューから実行できる機能の詳細です。</p>
 
         <h3 id="menu-project">💼 プロジェクト</h3><!--  ******************************************************  -->
-        <dl class="indent">
-          <dt><strong>💾　プロジェクトを保存...</strong></dt>
-          <dd>現在のシートの内容を<code>JSON</code>形式のファイルとして
+        <ul>
+          <li>
+            <strong>💾　プロジェクトを保存...:</strong><br>
+            現在のシートの内容を<code>JSON</code>形式のファイルとして
             ローカル（PC）にダウンロードします。<br> バックアップとして機能します。<br>
             <span class="very-small">
               ※シートの編集状態をそのまま保存するため、不正な値や未記入の項目があっても保存可能です。
             </span>
-          </dd>
-          <dt><strong>📂　プロジェクトを読み込み...</strong></dt>
-          <dd>保存された<code>JSON</code>ファイルを読み込み、シートの内容を復元します。</dd>
-          <dt><strong>♻️　シートのリセット(新規作成)...</strong></dt>
-          <dd>シートの内容をクリアし、新規作成状態にします。</dd>
-        </dl>
+          </li>
+          <li>
+            <strong>📂　プロジェクトを読み込み...:</strong><br>
+            保存された<code>JSON</code>ファイルを読み込み、シートの内容を復元します。
+          </li>
+          <li>
+            <strong>♻️　シートのリセット(新規作成)...:</strong><br>
+            シートの内容をクリアし、新規作成状態にします。
+          </li>
+        </ul>
 
         <h3 id="menu-export">📤 エクスポート</h3><!--  *******************************************************  -->
-        <p>作成したデータを各<code>DAW</code>用の形式で書き出します。
-          メニューから出力形式を選択してください。</p>
-        <div class="alert">
-          <strong>❗ エクスポート時の注意:</strong>
-          <ul>
-            <li>
-              <strong>MIDIノートのエラー:</strong><br>
-              不正な値や範囲外の値が存在する場合、エクスポートは実行できません。
-              ダイアログにエラー件数が表示されますので、
-              <code>Main</code>シートを修正してから再度実行してください。
-            </li>
-            <li>
-              <strong>その他の項目の補正:</strong><br>
-              MIDIノート以外の項目に不正な値や未記入がある場合、
-              デフォルト値に自動補正されて出力されますのでご注意ください。
-            </li>
-          </ul>
-        </div>
+        <p>
+          作成したデータを各<code>DAW</code>用の形式で書き出します。
+          メニューから出力形式を選択してください。
+        </p>
         <h4>対応出力形式:</h4>
         <ul>
-          <li><code>.artMap</code>(CakeWalk)</li>
+          <li><code>.artMap</code>(Cakewalk)</li>
           <li><code>.expressionmap</code>(Cubase)</li>
           <li><code>.keyswitch</code>(Studio One)</li>
         </ul>
+        <div id="export-err" class="alert end-space">
+          <div><strong>❗ エクスポート時の注意:</strong></div>
+          <div class="float-image">
+            <img src="img/export-err.png" alt="export-err" class="zoomable" width="350">
+          </div>
+          <p class="small">
+            <strong>MIDIノートのエラー:</strong><br>
+            不正な値や範囲外の値が存在する場合、エクスポートは実行できません。
+            ダイアログにエラー件数が表示されますので、<code>Main</code>シートを修正してから再度実行してください。
+          </p>
+          <div class="clear"></div>
+        </div>
+        <p>
+          <strong>その他の項目の補正:</strong><br>
+          MIDIノート以外の項目に不正な値や未記入がある場合、
+          デフォルト値に自動補正されて出力されますのでご注意ください。
+        </p>
         <h4>共通設定:</h4>
         <p id="octave-offset"><strong>オクターブオフセット:</strong><br>
           エクスポート時に表示されるダイアログで、<code>オクターブオフセット</code>
           （初期値: 0）を設定できます。
         </p>
-        <img src="img/octave-offset.png" alt="octave-offset">
+        <div class="quote-style end-space">
+          <div class="float-image">
+            <img src="img/octave-offset.png" alt="octave-offset" class="zoomable" width="350">
+          </div>
+          <ul class="small">
+            <li>音源側の<code>Middle C</code>と<code>DAW</code>側の
+              <code>Middle C</code>の設定が異なる場合に、この値で補正します。
+            </li>
+            <li>
+              <code>DAW</code>上で意図したキースイッチが反応しない場合は、
+              この値を<code>±</code>して再度エクスポート・読み込みを試してください。
+            </li>
+            <li>
+              補正後のMIDIノートナンバーが<code>0～127</code>の範囲を超えるような値には設定できません。
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <h4>DAW固有の設定</h4><!---------------------------------------------------------------------------------->
+        <h5>Cubase (.expressionmap)</h5>
+        <p>エクスポートダイアログで「リモートキー設定」を選択できます。</p>
         <ul>
-          <li>音源側の<code>Middle C</code>と<code>DAW</code>側の
-            <code>Middle C</code>の設定が異なる場合に、この値で補正します。
+          <li>
+            <strong>リモートキー無し:</strong><br>
+            MIDIキーボードからの入力にアーティキュレーションを割り当てません。
           </li>
           <li>
-            <code>DAW</code>上で意図したキースイッチが反応しない場合は、
-            この値を<code>±</code>して再度エクスポート・読み込みを試してください。
-          </li>
-          <li>
-            補正後のMIDIノートナンバーが<code>0～127</code>の範囲を超えるような値には 設定できません。
+            <strong>出力マッピングと同じノート:</strong><br>
+            MIDIキーボードからの入力に出力マッピングと同じMIDIノートを割り当てます。
           </li>
         </ul>
-        <h4>DAW固有の設定</h4><!---------------------------------------------------------------------------------->
-        <dl>
-          <dt><strong>Cubase (.expressionmap)</strong></dt>
-          <dd>
-            <p>エクスポートダイアログで「リモートキー設定」を選択できます。</p>
+        <div class="alert">
+          <strong>❗ カラー設定の注意（プリセットカラー推奨）:</strong><br>
+          <div id="cubase-color" class="small">
+            <p class="indent">
+              <code>Cubase</code>の<code>Expression Map</code>では、色はカラーコードではなく
+              「プリセット番号」で管理されています。そのため、任意のカラーコードを入力しても
+              <code>Cubase</code>上では正しく反映されません。
+            </p>
             <ul>
               <li>
-                <strong>リモートキー無し:</strong><br>
-                MIDIキーボードからの入力にアーティキュレーションを割り当てません。
+                本ツールのプリセットカラー（1～16）は、<code>Cubase</code>
+                のデフォルトカラー番号に対応しています。
               </li>
               <li>
-                <strong>出力マッピングと同じノート:</strong><br>
-                MIDIキーボードからの入力に出力マッピングと同じMIDIノートを割り当てます。
+                プリセットと同じ色を入力した場合、対応する<code>Cubase</code>
+                のデフォルトのプリセットカラー番号として出力されます。
+              </li>
+              <li>
+                それ以外の色が入力されている場合は、デフォルトのカラー番号に自動補正されます。
+              </li>
+              <li>
+                <code>Cubase</code>用に作成する場合は、
+                <a href="#sidebar-color" class="jump">プリセットカラー</a>から選択して入力することを推奨します。
               </li>
             </ul>
-            <div class="alert">
-              <strong>❗ カラー設定の注意（プリセットカラー推奨）:</strong><br>
-              <div id="cubase-color" class="small">
-                <p class="indent">
-                  <code>Cubase</code>の<code>Expression Map</code>では、色はカラーコードではなく
-                  「プリセット番号」で管理されています。そのため、任意のカラーコードを入力しても
-                  <code>Cubase</code>上では正しく反映されません。
-                </p>
-                <ul>
-                  <li>
-                    本ツールのプリセットカラー（1～16）は、<code>Cubase</code>
-                    のデフォルトカラー番号に対応しています。
-                  </li>
-                  <li>
-                    プリセットと同じ色を入力した場合、対応する<code>Cubase</code>
-                    のデフォルトのプリセットカラー番号として出力されます。
-                  </li>
-                  <li>
-                    それ以外の色が入力されている場合は、デフォルトのカラー番号に自動補正されます。
-                  </li>
-                  <li>
-                    <code>Cubase</code>用に作成する場合は、
-                    <strong>プリセットカラーから選択して入力すること</strong>を推奨します。
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </dd>
-          <dt><strong>Studio One (.keyswitch)</strong></dt>
-          <dd>
-            <p>エクスポートダイアログで「入力設定」を選択できます。</p>
-            <ul>
-              <li>
-                <strong>入力と出力のMIDIノートを合わせる:</strong><br>
-                MIDIキーボードからの入力及びピアノロールの入力を出力するMIDIノートに合わせます。
-              </li>
-              <li>
-                <strong>入力設定なし出力のみ:</strong><br>
-                サウンドバリエーションがMIDIノートを出力するのみに設定します。
-              </li>
-            </ul>
-          </dd>
-        </dl>
+          </div>
+        </div>
+
+        <h5>Studio One (.keyswitch)</h5>
+        <p>エクスポートダイアログで「入力設定」を選択できます。</p>
+        <ul>
+          <li>
+            <strong>入力と出力のMIDIノートを合わせる:</strong><br>
+            MIDIキーボードからの入力及びピアノロールの入力を出力するMIDIノートに合わせます。
+          </li>
+          <li>
+            <strong>入力設定なし出力のみ:</strong><br>
+            サウンドバリエーションがMIDIノートを出力するのみに設定します。
+          </li>
+        </ul>
 
         <h3 id="menu-tools">🛠️ Appツール</h3><!--  ***********************************************************  -->
         <p>入力作業を効率化するための補助機能です。</p>
@@ -393,7 +413,7 @@
           <li>
             <strong>🎚️　サイドバーを開く:</strong><br><!------------------------------------------------------------>
             画面右側に編集用のサイドバーを表示します。<br>
-            サイドバーの詳細は<sup>※</sup><a href="#sidebar">サイドバー機能</a>を参照してください。
+            サイドバーの詳細は<a href="#sidebar" class="jump">サイドバー機能</a>を参照してください。
           </li>
           <li><strong>Mainシート</strong><!------------------------------------------------------------------------>
             <ul>
@@ -423,8 +443,8 @@
             <ul>
               <li>
                 <strong>🎹→🗺️　マッピングを表示:</strong><br>
-                <code>Settings</code>シートの<sup>※</sup>
-                <a href="#mapping-viewer">Mapping Viewer</a>を更新します。
+                <code>Settings</code>シートの
+                <a href="#mapping-viewer" class="jump">Mapping Viewer</a>を更新します。
               </li>
               <li>
                 <strong>🗺️→🧹　マッピングをクリア:</strong><br>
@@ -460,9 +480,9 @@
               </li>
               <li>
                 <strong>💎 キースイッチ抽出 Gem</strong><br>
-                シートの入力作業に便利な<code>Gemini Gem</code>を作りました。ぜひご活用ください。<br>
-                <code>Gemini Gem</code>の詳細は<sup>※</sup><a href="#gemini-gem">キースイッチ抽出 Gem</a>
-                を参照してください。
+                シートの入力作業に便利な<code>Gemini Gem</code>へのリンクです<br>
+                <code>Gemini Gem</code>の詳細は
+                <a href="#gemini-gem" class="jump">キースイッチ抽出 Gem</a>を参照してください。
               </li>
             </ul>
           </li>
@@ -511,14 +531,14 @@
         <h3 id="sidebar-group">🏷️ グループ選択</h3><!--  ******************************************************  -->
         <p>
           <code>Groups</code>シートで定義されたグループをプルダウンから選択します。
-          <code>Groups</code>シートを編集した場合は、更新ボタン「<span class="skyblue">↻</span>
+          <code>Groups</code>シートを編集した場合は、更新ボタン「<span class="bright-blue">↻</span>
           グループリストを再読み込み」を押してリストを更新してください。
         </p>
         <img src="img/group-select.png" alt="group-select">
 
         <h3 id="sidebar-action">✔️ アクション (Mainシート)</h3><!--  ******************************************  -->
         選択中の色やグループを<code>Main</code>シートに適用するボタン群です。<br>
-        <div class="quote-style">
+        <div class="quote-style end-space">
           <div class="float-image">
             <img src="img/selected-range.png" alt="selected-range" class="zoomable" width="400">
           </div>
@@ -588,7 +608,7 @@
         </div>
         <div class="right">
           こちらからもアクセスできます。
-          <a href="https://gemini.google.com/gem/10KXJeQ0_FxsTAfYv99VfV0LSSe6h5yj3?usp=sharing"
+          <a href="#"
             target="_blank" rel="noopener noreferrer" class="gem-btn js-gem-link">
             💎 キースイッチ抽出 Gem を開く
           </a>
@@ -601,7 +621,7 @@
         <h2>Tips</h2>
         <div class="accordion">
           <strong class="accordion-header">
-            基本的な作業フロー ( <span class="skyblue">クリックして開閉</span> )
+            基本的な作業フロー ( <span class="bright-blue">クリックして開閉</span> )
           </strong>
           <div class="accordion-content">
             基本的な作業フローは以下のようになっています。<br>
@@ -610,17 +630,17 @@
               <li>
                 <strong>準備 :</strong><br>
                   シートへの入力は手動入力の外にコピー＆ペーストでも入力できます。<br>
-                  <sup>※</sup><a href="#gemini-gem">キースイッチ抽出 Gem</a>を使うと効率的です。<br>
+                  <a href="#gemini-gem" class="jump">キースイッチ抽出 Gem</a>を使うと効率的です。<br>
               </li>
               <li>
                 <strong>アーティキュレーション名とMIDIノート名の入力:</strong><br>
-                <code>Main</code>シートの<code>Articuration Name</code>列、<code>MIDI Note</code>列
+                <code>Main</code>シートの<code>Articulation Name</code>列、<code>MIDI Note</code>列
                 にキースイッチ情報を入力します。<br>
                 <code>Gemini</code>でコピーしたデータを貼り付ける場合は入力開始セル( 通常はA2セル )
                 に貼り付けるだけで自動的にセルに分割されてデータが挿入されます。<br>
-                <div class="quote-style">
+                <div class="quote-style end-space">
                   <div class="float-image">
-                    <img src="img/split-text.png"alt="split-text" class="zoomable" width="250">
+                    <img src="img/split-text.png" alt="split-text" class="zoomable" width="300">
                   </div>
                   <p class="note small">
                     💡 「表のコピー」からの貼り付けでは無く<code>CSV</code>データなどを貼り付けた場合には
@@ -660,8 +680,8 @@
               <li>
                 <strong>エクスポート:</strong><br>
                 形式を選択してエクスポートしてください。<br>
-                <code>MIDI Note</code>にエラーが無ければエクスポートできます。
-                必要があれば<sup>※</sup><a href="#octave-offset">オクターブオフセット</a>を設定してください。
+                <code>MIDI Note</code>にエラーが無ければエクスポートできます。必要があれば
+                <a href="#octave-offset" class="jump">オクターブオフセット</a>を設定してください。
               </li>
               <li>
                 <strong>DAWにインポート:</strong><br>
@@ -701,8 +721,9 @@
           設定を変更して値が正常範囲（黒色）になるか確認してください。<br>
         </p>
         <p>
-          音源側と<code>DAW</code>側の採用している<code>Middle C</code>が合わない場合はエクスポート時に
-          <sup>※</sup><a href="#octave-offset">オクターブオフセット</a>を設定することによって対応してください。<br>
+          音源側と<code>DAW</code>側の採用している<code>Middle C</code>が合わない場合は
+          エクスポート時に<a href="#octave-offset" class="jump">オクターブオフセット</a>
+          を設定することによって対応してください。<br>
           <span class="very-small">
             ※<code>DAW</code>側でこの差分を吸収する設定ができる機能が搭載されている物もあります。
           </span>
@@ -719,7 +740,14 @@
       <!-- #region Changelog -->
       <section id="changelog"><!--  ***************************************************************************  -->
         <h2>更新履歴</h2>
-        <dl id="changelog-list"></dl>
+        <div class="accordion">
+          <strong class="accordion-header">
+            履歴を表示 ( <span class="bright-blue">クリックして開閉</span> )
+          </strong>
+          <div class="accordion-content">
+            <dl id="changelog-list"></dl>
+          </div>
+        </div><hr>
       </section>
       <!-- #endregion -->
 
@@ -741,7 +769,7 @@
   </div>
 
   <footer><!--  ***********************************************************************************************  -->
-    <p>&copy; 2025 Second Illness</p>
+    <p>&copy; 2026 Second Illness</p>
   </footer>
 
   <button id="back-to-top" title="トップへ戻る" aria-label="ページトップへ戻る">↑</button>
@@ -752,172 +780,6 @@
     <img class="modal-content" id="img01">
   </div>
 
-  <!-- 更新履歴データの読み込み -->
-  <script src="changelog.js"></script>
-  <script>
-    // トップへ戻るボタンの制御
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // 更新履歴の生成
-    const changelogList = document.getElementById('changelog-list');
-    if (typeof changelogData !== 'undefined' && changelogList) {
-      changelogData.forEach(item => {
-        // dt要素 (日付とバージョン)
-        const dt = document.createElement('dt');
-        dt.textContent = `${item.date} (${item.version})`;
-
-        // dd要素 (変更内容リスト)
-        const dd = document.createElement('dd');
-        const ul = document.createElement('ul');
-
-        item.changes.forEach(change => {
-          const li = document.createElement('li');
-          li.textContent = change;
-          ul.appendChild(li);
-        });
-
-        dd.appendChild(ul);
-        changelogList.appendChild(dt);
-        changelogList.appendChild(dd);
-      });
-    }
-
-    // リンク設定(app_links.json)の読み込みと適用
-    fetch('app_links.json')
-      .then(response => response.json())
-      .then(links => {
-        // 1. Gemini Gemリンクの更新
-        const gemLink = links.find(link => link.label.includes('Gem'));
-        if (gemLink) {
-          const gemBtns = document.querySelectorAll('.js-gem-link');
-          gemBtns.forEach(btn => btn.href = gemLink.url);
-        }
-
-        // 2. 動画セクションの更新
-        const videoLink = links.find(link => link.label.includes('YouTube'));
-        const videoContainer = document.getElementById('video-container');
-        if (videoLink && videoContainer) {
-          videoContainer.innerHTML = ''; // 既存のプレースホルダーをクリア
-
-          // URLから動画IDを抽出 (v=XXXX)
-          let videoId = null;
-          try {
-            const urlObj = new URL(videoLink.url);
-            videoId = urlObj.searchParams.get('v');
-          } catch (e) {
-            // URL解析失敗時はリンクとして扱う
-          }
-
-          if (videoId) {
-            // 動画IDがある場合は埋め込みプレーヤーを表示
-            const wrapper = document.createElement('div');
-            wrapper.className = 'video-responsive';
-            wrapper.innerHTML = `
-              <iframe
-                src="https://www.youtube.com/embed/${videoId}"
-                title="${videoLink.label}"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>`;
-            videoContainer.appendChild(wrapper);
-          } else {
-            // 動画IDがない場合は準備中メッセージを表示
-            const p = document.createElement('p');
-            p.textContent = '詳しい使い方などはこちらで解説する予定です。ただいま準備中です。';
-            p.style.marginBottom = '0.5rem';
-            videoContainer.appendChild(p);
-
-            // URLが設定されている場合（チャンネルTOPなど）はリンクボタンを表示
-            if (videoLink.url) {
-              const a = document.createElement('a');
-              a.href = videoLink.url;
-              a.target = '_blank';
-              a.rel = 'noopener noreferrer';
-              a.className = 'gem-btn'; // 既存のボタンスタイルを流用
-              a.textContent = videoLink.label;
-              a.style.display = 'inline-block';
-              a.style.textDecoration = 'none';
-              a.style.textAlign = 'center';
-              videoContainer.appendChild(a);
-            }
-          }
-        }
-      })
-      .catch(err => console.error('リンク設定の読み込みに失敗しました', err));
-
-    // 画像モーダル制御
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("img01");
-    const images = document.querySelectorAll('.zoomable');
-
-    images.forEach(img => {
-      // アイコン表示用のラッパーを自動生成（tall-crop以外）
-      if (!img.parentElement.classList.contains('tall-crop')) {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'zoom-container';
-        img.parentNode.insertBefore(wrapper, img);
-        wrapper.appendChild(img);
-      }
-
-      img.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-      });
-    });
-
-    const closeSpan = document.querySelector(".close");
-    if (closeSpan) closeSpan.onclick = () => modal.style.display = "none";
-
-    modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
-
-    // アコーディオン制御関数
-    const setupAccordion = (accordion)  => {
-      const header = accordion.querySelector('.accordion-header');
-      const content = accordion.querySelector('.accordion-content');
-
-      if (!header || !content) return;
-
-      // 初期状態: is-openクラスがなければ隠しておく
-      if (!accordion.classList.contains('is-open')) {
-        content.style.display = 'none';
-      }
-
-      header.addEventListener('click', () => {
-        if (content.style.display === 'none') {
-          // 開く
-          accordion.classList.add('is-open');
-          content.style.display = 'block';
-          content.animate(
-            [{ height: '0px', opacity: 0 }, { height: content.scrollHeight + 'px', opacity: 1 }],
-            { duration: 300, easing: 'ease-out' }
-          );
-        } else {
-          // 閉じる
-          accordion.classList.remove('is-open');
-          // 閉じるアニメーション
-          const closingAnim = content.animate(
-            [{ height: content.scrollHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
-            { duration: 300, easing: 'ease-out' }
-          );
-          closingAnim.onfinish = () => {
-            content.style.display = 'none';
-          };
-        }
-      });
-    }
-
-    // クラス .accordion を持つ要素に適用
-    document.querySelectorAll('.accordion').forEach(setupAccordion);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
