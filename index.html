@@ -56,22 +56,22 @@
         <h2>Key Switch Sheet とは</h2>
         <p>
           <code>Key Switch Sheet</code> は、<code>DAW</code>用のキースイッチマップファイルを
-          Googleスプレッドシートで手軽に作成するためのツールです。
+          <strong>Googleスプレッドシート</strong>で手軽に作成するためのツールです。
         </p>
         <img src="img/over-view.png" alt="over-view" class="zoomable" width="600">
         <ul>
           <li>
-            1つのアーティキュレーションにつき1つのMIDIノートを出力する
+            1つのアーティキュレーションにつき1つのMIDIノートONイベントを出力する
             シンプルなキースイッチ設定にのみ対応しています。
           </li>
           <li>
-            ベロシティーや<code>MIDI CC</code>やプログラムチェンジには対応していません。
+            ベロシティーや<code>MIDI CC</code>やプログラムチェンジなどには対応していません。
           </li>
           <li>
-            シンプルなキースイッチマップファイルの作成や
-            たたき台作成用としてご活用ください。
+            シンプルなキースイッチマップファイルの作成やたたき台作成用としてご活用ください。
           </li>
           <li>
+            <code>Cakewalk</code>に最適化されています。
             <code>Cubase</code>,<code>Studio One</code>形式でのエクスポートについては
             簡易的な対応となっています。ご了承ください。
           </li>
@@ -84,7 +84,7 @@
         <h2>導入方法</h2>
         <div class="accordion">
           <strong class="accordion-header">
-            導入手順 ( <span class="bright-blue">クリックして開閉</span> )
+            🚀 配布用リンク・導入手順 ( <span class="bright-blue">クリックして開閉</span> )
           </strong>
           <div class="accordion-content">
             <div class="right spacer">
@@ -121,15 +121,17 @@
                 <img src="img/not-confirmed.png" alt="not-confirmed" class="zoomable" width="400">
               </li>
               <li>
-                詳細情報が表示されますので、「Key Switch Sheet（安全ではないページ）に移動」をクリックします。
+                詳細情報が表示されますので、「無題のプロジェクト（安全ではないページ）に移動」をクリックします。
                 <img src="img/not-safe.png" alt="not-safe" class="zoomable" width="400">
               </li>
               <li>
                 アクセス権限の確認画面が表示されます。権限の選択（チェックボックス）が表示されたら<br>
-                <strong>「すべて選択」</strong>にチェックを入れて「続行」をクリックしてください。
+                <strong>「すべて選択」</strong>のチェックボックスににチェックを入れて、
+                一番下の「続行」のボタンををクリックしてください。
                 <div class="tall-crop">
                   <img src="img/continue.png" alt="continue" class="zoomable" width="400">
                 </div>
+                以上で、このスプレッドシートのスクリプトが使用できるようになります。
               </li>
             </ol>
             <p class="quote-style indent note">
@@ -432,9 +434,11 @@
                 半音階の連番MIDIノートでセルを埋めます。<br>
                 MIDIノート用のオートフィルのような機能です。<br>
                 <p class="alert note">
-                  ※選択開始セルから上に向かって選択していても基準セルは選択開始セルとなります。<br>
-                  よって、基準セルがヘッダ行だった場合や、基準セルに有効なMIDIノートが入力されていなかった
-                  場合などはエラーとなり処理が実行されません。
+                  ※選択開始セルから下に向かって選択していても、上に向かって選択していても
+                  基準セルは選択開始セルとなります。<br>
+                  よって、基準セルがヘッダ行だった場合や、基準セルに有効なMIDIノートが入力されていなかった場合、
+                  生成されるMIDIノートが<code>0～127</code>のMIDIノートナンバーの範囲を超える場合
+                  などはエラーとなり処理が実行されません。
                 </p>
               </li>
             </ul>
@@ -773,6 +777,7 @@
   </div>
 
   <footer><!--  ***********************************************************************************************  -->
+    <div id="sns-links" style="margin-bottom: 15px;"></div>
     <p>&copy; 2026 Second Illness</p>
   </footer>
 

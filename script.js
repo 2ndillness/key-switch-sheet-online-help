@@ -1,33 +1,18 @@
-// トップへ戻るボタンの制御
-const backToTop = document.getElementById('back-to-top');
-let isScrolling = false;
-
-window.addEventListener('scroll', () => {
-  if (!isScrolling) {
-    window.requestAnimationFrame(() => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-      isScrolling = false;
+// 共通のJSON取得関数
+const fetchJson = (url) => {
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      return response.json();
     });
-    isScrolling = true;
-  }
-}, { passive: true });
+};
 
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// --- データ読み込み・更新系 ---
 
 // 更新履歴の生成
 const changelogList = document.getElementById('changelog-list');
 if (changelogList) {
-  fetch('changelog.json')
-    .then(response => {
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      return response.json();
-    })
+  fetchJson('changelog.json')
     .then(data => {
       data.forEach(item => {
         // dt要素 (日付とバージョン)
@@ -53,11 +38,7 @@ if (changelogList) {
 }
 
 // リンク設定(app_links.json)の読み込みと適用
-fetch('app_links.json')
-  .then(response => {
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    return response.json();
-  })
+fetchJson('app_links.json')
   .then(links => {
     // 0. 配布用テンプレートリンクの更新
     const sheetIdEntry = links.find(link => link.label === 'Spreadsheet ID');
@@ -97,14 +78,16 @@ fetch('app_links.json')
           <iframe
             src="https://www.youtube.com/embed/${videoId}"
             title="${videoLink.label}"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
           </iframe>`;
         videoContainer.appendChild(wrapper);
       } else {
         // 動画IDがない場合は準備中メッセージを表示
         const p = document.createElement('p');
-        p.textContent = '詳しい使い方などはこちらで解説する予定です。ただいま準備中です。';
+        p.textContent = 'ただいま準備中です。';
         p.style.marginBottom = '0.5rem';
         videoContainer.appendChild(p);
 
@@ -127,6 +110,53 @@ fetch('app_links.json')
     }
   })
   .catch(err => console.error('リンク設定の読み込みに失敗しました', err));
+
+// SNSリンク設定(config.json)の読み込みと適用
+const snsContainer = document.getElementById('sns-links');
+if (snsContainer) {
+  fetchJson('config.json')
+    .then(config => {
+      if (config.sns && Array.isArray(config.sns)) {
+        config.sns.forEach(item => {
+          const link = document.createElement('a');
+          link.href = item.url;
+          link.textContent = item.name;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.style.margin = '0 10px';
+          link.style.display = 'inline-block';
+          snsContainer.appendChild(link);
+        });
+      }
+    })
+    .catch(err => console.error('SNS設定の読み込みに失敗しました', err));
+}
+
+// --- 画面制御系 ---
+
+// トップへ戻るボタンの制御
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  let isScrolling = false;
+
+  window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // 画像モーダル制御
 const modal = document.getElementById("imageModal");
