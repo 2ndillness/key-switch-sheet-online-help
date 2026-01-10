@@ -525,6 +525,7 @@ img {
     z-index: 100;
     max-height: 100vh;
     overflow-y: auto;
+    padding: 0;
   }
 
   main {
@@ -535,13 +536,15 @@ img {
   .nav-toggle-label {
     display: block;
     cursor: pointer;
-    padding: 0.8rem;
+    padding: 0.6rem;
     background-color: #e9ecef;
-    border-radius: 4px;
+    border-radius: 0;
     text-align: center;
     font-weight: bold;
     color: #495057;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 101;
   }
   .nav-toggle-label:hover {
     background-color: #dee2e6;
@@ -552,7 +555,17 @@ img {
   }
 
   #nav-toggle:checked ~ ul {
-    display: block; /* チェックされたら表示 */
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 3.5rem 1.5rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 100;
   }
 
   nav a {
