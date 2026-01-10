@@ -229,3 +229,14 @@ const setupAccordion = (accordion)  => {
 
 // クラス .accordion を持つ要素に適用
 document.querySelectorAll('.accordion').forEach(setupAccordion);
+
+// スマホ用メニューの制御
+const navToggle = document.getElementById('nav-toggle');
+if (navToggle) {
+  // メニュー内のリンクをクリックしたら自動で閉じる
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.checked = false;
+    });
+  });
+}
