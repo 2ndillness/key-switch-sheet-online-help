@@ -569,7 +569,7 @@ img {
   }
 
   nav a {
-    padding: 0.5rem 0; /* タップしやすいように余白を広げる */
+    padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
   }
 }
